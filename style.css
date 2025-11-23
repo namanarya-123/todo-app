@@ -6,10 +6,12 @@
 }
 
 body {
-    background: #f4f4f4;
+    /* background: #f4f4f4; */
     display: flex;
     justify-content: center;
     padding-top: 60px;
+    background-image: url("img.jpg");
+
 }
 
 .container {
