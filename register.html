@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <h2>Create Account</h2>
+    <input type="text" id="regUser" placeholder="Enter Username">
+    <input type="password" id="regPass" placeholder="Enter Password">
+    <button onclick="register()">Register</button>
+
+    <p>Already have an account? <a href="login.html">Login</a></p>
+</div>
+
+<script>
+function register() {
+    let username = document.getElementById("regUser").value;
+    let password = document.getElementById("regPass").value;
+
+    if(username === "" || password === "") {
+        alert("All fields are required!");
+        return;
+    }
+
+    // Save to Local Storage (frontend only)
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+
+    alert("Registration Successful!");
+    window.location.href = "login.html";
+}
+</script>
+</body>
+</html>
